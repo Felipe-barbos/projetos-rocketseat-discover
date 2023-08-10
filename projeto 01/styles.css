@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   color: WHITE;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -12,22 +15,41 @@
 }
 
 body {
+  align-items: center;
   font-size: 1.6rem;
   overflow-x: hidden;
-  background: #000;
+  background: linear-gradient(#000 65%,
+      #8257E5);
   font-family: 'Manrope', sans-serif;
+
+}
+
+.app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  align-items: center;
+
 }
 
 header {
   padding: 1rem 3.2rem;
   width: 100%;
   margin: 0 auto;
-  height: 5.8rem;
+  height: 8.8rem;
   background: #000;
-  align-items: center;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo {
+  width: 17rem;
+  height: 3.3rem;
+  background-image: url("./assets/logo.svg");
 }
 
 
@@ -36,20 +58,34 @@ nav {
   align-items: center;
 }
 
+nav button {
+
+
+  padding: 1rem 3rem;
+
+  background: #000;
+
+  border: 1px solid #8257E5;
+
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  display: none;
+}
+
 .nav-list {
   background: #000;
   display: flex;
   flex-direction: column;
   position: absolute;
   list-style: none;
-  top: 6vh;
+  top: 9vh;
   right: 0;
   left: 0;
   width: 100vw;
-  height: 42rem;
-
-
-
   align-items: flex-start;
   transform: translateX(100%);
   transition: transform 0.3s ease-in;
@@ -83,6 +119,7 @@ nav {
 }
 
 .mobile-menu.active {
+  margin-bottom: 1rem;
   width: 4.0rem;
   height: 4.0rem;
   background-image: url("./assets/menuClose.svg");
@@ -104,4 +141,187 @@ nav {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+main h1 {
+  margin: 8.8rem 2.7rem 0 2.8rem;
+  width: 37rem;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+main button {
+  margin-top: 8.8rem;
+
+  padding: 1rem 3rem;
+
+  background: #000;
+
+  border: 1px solid #8257E5;
+
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+main button:hover {
+  background: #8257E5;
+  cursor: pointer;
+  border: none;
+}
+
+.lines {
+  margin-top: 8.8rem;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 7rem;
+  text-align: center;
+}
+
+#line {
+  color: #000;
+  text-shadow:
+    -1px -1px 0px #8257E5,
+    -1px 1px 0px #8257E5,
+    1px -1px 0px #8257E5,
+    1px 0px 0px #8257E5;
+
+}
+
+
+.mainImage {
+  width: 42rem;
+  height: 32rem;
+
+  background: url("./assets/coffee.svg");
+}
+
+
+@media (min-width: 1024px) {
+
+  .app {
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  header {
+
+    margin: 5rem;
+    height: 8vh;
+    gap: 8rem;
+  }
+
+  .logo {
+
+    width: 43.06px;
+    height: 50px;
+    background: url("./assets/logoDesktop.svg");
+  }
+
+
+
+
+  nav button {
+    margin: 0 8rem 0 8rem;
+    padding: 1.1rem 3.8rem;
+    display: flex;
+  }
+
+
+  .nav-list {
+
+    background: none;
+    position: inherit;
+    flex-direction: row;
+    top: none;
+    left: none;
+    right: none;
+    align-items: center;
+
+    width: 53rem;
+
+    position: none;
+    display: flex;
+    gap: 4.2rem;
+
+
+
+    transform: none;
+    transition: none;
+  }
+
+  .nav-list li {
+    opacity: 1;
+    border: none;
+    padding: 0;
+    width: auto;
+  }
+
+  .nav-list li:hover {
+    color: #E1E1E6;
+    font-weight: 700;
+    border-left: none;
+  }
+
+
+  .mobile-menu {
+    display: none;
+  }
+
+  main {
+    width: 93rem;
+  }
+
+  main h1 {
+    display: none;
+
+  }
+
+  main button {
+    display: none;
+  }
+
+  .lines {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 8.8rem;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 7rem;
+    text-align: center;
+  }
+
+  .mainImage {
+    width: 80rem;
+    height: 50rem;
+    background: url("./assets/coffeeDesktop.svg");
+  }
+
+
+  footer {
+    width: 100%;
+    height: 8rem;
+    background: #8257E5;
+  }
+
+
+
 }
