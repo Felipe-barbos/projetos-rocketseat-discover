@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 :root {
@@ -9,21 +10,233 @@
 }
 
 body {
-  margin: 0 auto;
   font-size: 1.6rem;
   align-items: center;
   background: #0E0E0E;
+
+  font-family: 'Montserrat', sans-serif;
 }
 
 .app {
   margin: 0 auto;
   width: 144rem;
   height: 443rem;
+  align-items: center;
 }
 
 header {
   width: 100%;
   height: 100rem;
-
+  display: flex;
+  flex-direction: column;
   background: url(./assets/background.svg);
+}
+
+nav {
+  margin: 5.7rem;
+  width: 127rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 6rem;
+  font-size: 1.5rem;
+}
+
+nav h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+nav h1 a {
+  color: #FF5B50;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 600;
+}
+
+nav button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 2.2rem;
+  font-size: 1.6rem;
+  color: #000000;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav button:hover {
+  cursor: pointer;
+  background: #cac8c8;
+  padding: 1rem 2.2rem;
+}
+
+
+.advertising {
+  margin: 4rem 5.7rem 2rem 5.7rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+
+}
+
+.markeArtist {
+  width: 40rem;
+}
+
+.markeArtist2 {
+  display: flex;
+  gap: 4rem;
+
+}
+
+.markeArtist2 h1 {
+  width: 59rem;
+
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.markeArtist2 h1 a {
+  color: #FF5B50;
+}
+
+.markeArtist2 img {
+  width: 20rem;
+  height: 20rem;
+
+}
+
+.container {
+  margin: 0 auto;
+
+}
+
+.gallery {
+  margin: 10rem 5.7rem 0rem 5.7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2rem;
+}
+
+.item {
+  width: 30rem;
+  height: 19rem;
+  border: 1px solid #FFF;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+
+
+  transition: all 200ms ease-out;
+  display: block;
+
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(250%);
+
+  transform: scale(1.1);
+}
+
+.main1 {
+  display: flex;
+  height: 66rem;
+
+  border-bottom: 1px solid #5A5757;
+}
+
+
+.numberStatistic {
+  padding: 6rem;
+  align-items: center;
+
+
+
+  border-right: 1px solid #5A5757;
+
+}
+
+.numberStatistic ul {
+  margin-top: 5rem;
+  list-style: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.numberStatistic ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numberStatistic h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.numberStatistic p {
+  color: #5A5757;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+
+.advertising2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  overflow: hidden;
+}
+
+.info {
+  padding: 7.5rem 12rem 5rem 6.5rem;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.info p {
+  display: flex;
+  flex-direction: column;
+  width: 43rem;
+  gap: 6rem;
+
+  font-size: 1.8rem;
+
+}
+
+.advertising2 img {
+  width: 100%;
+
+  cursor: pointer;
+
+  transition: all 200ms ease-out;
+  display: block;
+}
+
+.advertising2 img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(250%);
+
+  transform: scale(1.1);
 }
